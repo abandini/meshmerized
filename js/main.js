@@ -21,16 +21,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
+            // Prevent the default form submission
+            e.preventDefault();
+            
             // Form validation is handled by HTML5 required attribute
-            // This handles the redirect after form submission
             
             // Store form data in localStorage for thank you page
             const name = document.getElementById('name').value;
             localStorage.setItem('submitterName', name);
             
-            // The form will submit to Getform.io as specified in the action attribute
-            // After submission, we'll redirect to the thank you page
-            // This is handled by the form's action attribute and the redirect setup in Getform.io
+            // Get the form data
+            const formData = new FormData(contactForm);
+            
+            // Submit the form data using fetch
+            fetch('https://getform.io/f/bolmoqya', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // If the submission was successful, redirect to the thank you page
+                    window.location.href = 'thank-you.html';
+                } else {
+                    // If there was an error, show an alert
+                    alert('There was an error submitting the form. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            });
         });
     }
 
