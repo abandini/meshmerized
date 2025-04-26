@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - MESHMERIZED.COM</title>
+    <meta name="description" content="Contact us about acquiring the premium MESHMERIZED.COM domain for your mesh networking, IoT, or smart technology business.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">MESHMERIZED.COM</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About the Domain</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="meshCanvas" class="mesh-background"></div>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="subtitle">Interested in acquiring MESHMERIZED.COM? Send us a message to discuss.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-form">
+                <h2>Make an Offer</h2>
+                <p>Fill out the form below to express your interest in the MESHMERIZED.COM domain. We'll get back to you promptly.</p>
+                
+                <form id="contactForm" action="https://getform.io/f/bolmoqya" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name *</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company" class="form-label">Company</label>
+                        <input type="text" id="company" name="company" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Phone</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="offer" class="form-label">Your Offer (USD) *</label>
+                        <input type="number" id="offer" name="offer" class="form-control" min="1000" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="intended-use" class="form-label">Intended Use</label>
+                        <textarea id="intended-use" name="intended-use" class="form-control" placeholder="Please briefly describe how you plan to use the domain."></textarea>
+                    </div>
+                    
+                    <!-- Hidden fields for form tracking -->
+                    <input type="hidden" name="_gotcha" style="display:none !important">
+                    
+                    <!-- Redirect to thank-you page after submission -->
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    
+                    <button type="submit" class="submit-button">Submit Offer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">MESHMERIZED.COM</div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About the Domain</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <script>document.write(new Date().getFullYear())</script> MESHMERIZED.COM | All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/mesh-visualization.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
